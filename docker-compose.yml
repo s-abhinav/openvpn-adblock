@@ -1,0 +1,29 @@
+version: '3'
+services:
+
+  openvpn:
+    build:
+      context: ./docker-openvpn
+    cap_add:
+     - NET_ADMIN
+    command:
+     - startup.sh
+    container_name: openvpn
+    depends_on:
+     - blackhole
+    image: kylemanna/openvpn
+    ports:
+     - "1194:1194/udp"
+    restart: unless-stopped
+    volumes:
+     - ./openvpn-data/conf:/etc/openvpn
+     - ./bin/startup.sh:/usr/local/bin/startup.sh
+
+  blackhole:
+    build:
+      context: ./adblock-dns
+    cap_add:
+      - NET_ADMIN
+    container_name: blackhole
+    image: arthurkay/sagittarius-a
+    restart: unless-stopped

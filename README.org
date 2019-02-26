@@ -1,0 +1,22 @@
+#+Title: Read Me
+
+* Installation
+
+- Clone the repository
+#+BEGIN_SRC sh
+  git clone --recurse-submodules git@github.com:s-abhinav/openvpn-adblock.git
+#+END_SRC
+
+- Build the images
+#+BEGIN_SRC sh
+  cd openvpn-adblock
+  docker-compose build
+#+END_SRC 
+
+- Configure kylemanna/docker-openvpn
+#+INCLUDE: "./docker-openvpn/docs/docker-compose.md"
+
+- When you have completed importing the ovpn file to a client, start the services
+#+BEGIN_SRC sh
+  docker-compose up -d
+#+END_SRC
