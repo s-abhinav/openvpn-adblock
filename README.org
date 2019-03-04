@@ -4,7 +4,7 @@
 
 - Clone the repository
 #+BEGIN_SRC sh
-  git clone --recurse-submodules git@github.com:s-abhinav/openvpn-adblock.git
+  git clone git@github.com:s-abhinav/openvpn-adblock.git
 #+END_SRC
 
 - Build the images

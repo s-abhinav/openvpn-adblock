@@ -3,7 +3,7 @@ services:
 
   openvpn:
     build:
-      context: ./docker-openvpn
+      context: https://github.com/s-abhinav/docker-openvpn.git
     cap_add:
      - NET_ADMIN
     command:
@@ -21,7 +21,7 @@ services:
 
   blackhole:
     build:
-      context: ./adblock-dns
+      context: https://github.com/s-abhinav/adblock-dns.git
     cap_add:
       - NET_ADMIN
     container_name: blackhole

@@ -1,8 +1,0 @@
-[submodule "docker-openvpn"]
-	path = docker-openvpn
-	url = git@github.com/s-abhinav/docker-openvpn
-	branch = master
-[submodule "adblock-dns"]
-	path = adblock-dns
-	url = git@github.com:s-abhinav/adblock-dns.git
-	branch = master
